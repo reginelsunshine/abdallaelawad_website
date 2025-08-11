@@ -26,8 +26,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        Abdalla El Awad
+        <img src="logo-try.svg" alt="" width="45" height="65" class="d-inline-block align-text-top">
+       
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
@@ -38,9 +38,9 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Lezioni</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Studi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Attività</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.letuelezioni.it/insegnanti/abdalla-el-awad.htm">Lezioni</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.uniroma3.it/corsi/dipartimento-di-ingegneria-civile-informatica-e-delle-tecnologie-aeronautiche/lm/2023-2024/ingegneria-informatica-0580707303300001/">Studi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" id="showAttivita">Attività</a></li>
         </ul>
       </div>
     </div>
@@ -51,6 +51,7 @@
     <div class="row justify-content-center">
       <!-- immagine sempre in alto su mobile, al centro su desktop -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <p class="text-center fs-1">I'm Abdalla El Awad </p>
         <img src="/me-v2.png" alt="Foto di Abdalla El Awad" class="profile-img rounded-circle">
       </div>
     </div>
@@ -61,7 +62,7 @@
           <div class="card-body">
             <h5 class="card-title">Il mio GitHub</h5>
             <p class="card-text">Accedi per vedere i miei attuali progetti.</p>
-            <a href="#" class="btn btn-primary">Vai</a>
+            <a href="https://github.com/reginelsunshine" class="btn btn-primary">Vai</a>
           </div>
         </div>
       </div>
@@ -79,7 +80,60 @@
 
   </div>
 
+  <!-- Nuove card visibili solo se si clicca su Attività -->
+   <!-- Mettiamo questa parte dentro un container con padding -->
+<div class="container mt-4 d-none" id="extraCardsContainer">
+  <div class="row justify-content-center g-4 px-3 px-md-5">
+    <div class="col-12 col-md-8 col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Attività 1</h5>
+          <p class="card-text">Dettagli sull'attività 1.</p>
+          <a href="#" class="btn btn-secondary">Vai</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8 col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Attività 2</h5>
+          <p class="card-text">Dettagli sull'attività 2.</p>
+          <a href="#" class="btn btn-secondary">Vai</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8 col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Attività 3</h5>
+          <p class="card-text">Dettagli sull'attività 3.</p>
+          <a href="#" class="btn btn-secondary">Vai</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   <!-- Bootstrap Bundle JS (include Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <script>
+   const showAttivita = document.getElementById('showAttivita');
+const extraCardsContainer = document.getElementById('extraCardsContainer');
+
+showAttivita.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (extraCardsContainer.classList.contains('d-none')) {
+    extraCardsContainer.classList.remove('d-none');
+    extraCardsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    extraCardsContainer.classList.add('d-none');
+  }
+});
+
+
+  </script>
+
 </body>
 </html>

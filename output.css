@@ -160,6 +160,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .table {
     display: table;
   }
@@ -172,6 +175,9 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .align-text-top {
+    vertical-align: text-top;
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -212,3 +218,8 @@
     }
   }
 }
+
+.collapse {
+  visibility: visible !important;
+}
+

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home</title>
@@ -9,8 +11,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   
   <style>
+    .boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
     /* facciamo l'immagine centrata e responsive */
     .profile-img {
+      background-color: white;
       display: block;
       max-width: 300px; /* max dimensione */
       width: 100%;      /* responsiva */
@@ -19,6 +28,31 @@
       border: 6px solid white;
       
     }
+    .navbar{
+      background-image: url('/clbgrad-v2.png');
+       font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Semi-bold */
+    }
+
+  .card-first {
+  border-top-right-radius: 270px; /* curvatura pronunciata verso il basso */
+  border-bottom-left-radius: 30px;   /* angolo meno curvo */
+}
+
+
+.card-second {
+  border-top-left-radius: 270px;  /* curvatura pronunciata verso il basso */
+  border-bottom-right-radius: 30px;  /* angolo meno curvo */
+}
+.card-second .card-body {
+  text-align: right;
+}
+
+
+    
+/*  body{
+        background-image: url('protruding-squares.svg'); // percorso del file 
+} */
   </style>
 </head>
 <body>
@@ -58,7 +92,7 @@
 
     <div class="row justify-content-center g-4">
       <div class="col-12 col-md-8 col-lg-6">
-        <div class="card mb-4">
+        <div class="card mb-4 card-first">
           <div class="card-body">
             <h5 class="card-title">Il mio GitHub</h5>
             <p class="card-text">Accedi per vedere i miei attuali progetti.</p>
@@ -68,7 +102,7 @@
       </div>
 
       <div class="col-12 col-md-8 col-lg-6">
-        <div class="card mb-4">
+        <div class="card mb-4 card-second">
           <div class="card-body">
             <h5 class="card-title">Campagna ...</h5>
             <p class="card-text">A lavoro su qualcosa...</p>

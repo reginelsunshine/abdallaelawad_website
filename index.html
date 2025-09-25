@@ -1,180 +1,397 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  
-  <style>
-    .boldonse-regular {
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
 
-    /* facciamo l'immagine centrata e responsive */
-    .profile-img {
-      background-color: white;
-      display: block;
-      max-width: 300px; /* max dimensione */
-      width: 100%;      /* responsiva */
-      margin-left: auto;
-      margin-right: auto;
-      border: 6px solid white;
-      
-    }
-    .navbar{
-      background-image: url('/clbgrad-v2.png');
-       font-family: 'Poppins', sans-serif;
-  font-weight: 600; /* Semi-bold */
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
 
-  .card-first {
-  border-top-right-radius: 270px; /* curvatura pronunciata verso il basso */
-  border-bottom-left-radius: 30px;   /* angolo meno curvo */
-}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .bi-github {
+        font-size: 2.5rem;
+        color: white;
+      }
 
+      .bi-people {
+        font-size: 2.5rem;
+        color: white;
+      }
 
-.card-second {
-  border-top-left-radius: 270px;  /* curvatura pronunciata verso il basso */
-  border-bottom-right-radius: 30px;  /* angolo meno curvo */
-}
-.card-second .card-body {
-  text-align: right;
-}
+      .navbar {
+        background-color: transparent !important;
+        backdrop-filter: blur(10px);
+      }
 
-.text-center {
-  font-family: 'Playfair Display', serif;
-font-weight: 400;
- white-space: nowrap;  /* impedisce il wrapping */
-}
+      .navbar-brand img {
+        filter: brightness(0) invert(1);
+      }
 
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
 
-    
-/*  body{
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .nav-link {
+        font-size: medium;
+        font-weight: 600;
+        color: white !important;
+        transition: color 0.3s ease, opacity 0.3s ease;
+      }
+
+      .nav-link:hover {
+        opacity: 0.8;
+        color: rgba(0, 212, 255, 0.95) !important;
+      }
+
+      :root {
+        --unified-gradient: linear-gradient(
+          90deg,
+          rgba(23, 13, 54, 0.95) 9%,
+          rgba(18, 13, 66, 0.95) 21%,
+          rgba(16, 12, 80, 0.95) 24%,
+          rgba(15, 11, 89, 0.95) 35%,
+          rgba(9, 9, 121, 0.95) 38%,
+          rgba(8, 28, 134, 0.95) 41%,
+          rgba(8, 44, 144, 0.95) 59%,
+          rgba(7, 61, 156, 0.95) 78%,
+          rgba(6, 81, 169, 0.95) 100%,
+          rgba(0, 212, 255, 0.95) 100%
+        );
+      }
+      body {
+        background-image: var(--unified-gradient);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: transparent !important;
+      }
+
+      .navbar {
+        background-image: var(--unified-gradient);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent !important;
+      }
+
+      .boldonse-regular {
+        font-family: "Boldonse", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      /* facciamo l'immagine centrata e responsive */
+      .profile-img {
+        background-color: white;
+        display: block;
+        max-width: 300px; /* max dimensione */
+        width: 100%; /* responsiva */
+        margin-left: auto;
+        margin-right: auto;
+        border: 6px solid white;
+      }
+
+      .card-first {
+        border-radius: 25px;
+        background: #000000;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(9, 9, 121, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      .card-first .card-title {
+        color: white;
+      }
+
+      .card-first:hover {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(9, 9, 121, 0.8) 100%,
+          rgba(0, 212, 255, 0.8) 100%
+        );
+      }
+
+      .card-first .btn-primary {
+        width: 30%;
+      }
+
+      .card-first .card-text {
+        color: white;
+        font-family: "Intel One Mono", monospace;
+      }
+
+      .card-second {
+        border-radius: 25px;
+        background: #000000;
+        background: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(9, 9, 121, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      .card-second:hover {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(9, 9, 121, 0.8) 100%,
+          rgba(0, 212, 255, 0.8) 100%
+        );
+      }
+
+      .card-second .card-title {
+        color: white;
+      }
+
+      .card-second .card-text {
+        color: white;
+        font-family: "Intel One Mono", monospace;
+      }
+
+      .card-second .btn-primary {
+        width: 30%;
+      }
+
+      .card-second .card-body {
+        text-align: right;
+      }
+
+      .card-act1,
+      .card-act2,
+      .card-act3 {
+        border-radius: 25px;
+        background: #000000;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(9, 9, 121, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      .card-act1 .card-title,
+      .card-act2 .card-title,
+      .card-act3 .card-title {
+        color: white;
+      }
+
+      .card-act1 .card-text,
+      .card-act2 .card-text,
+      .card-act3 .card-text {
+        font-family: "Intel One Mono", monospace;
+        color: white;
+      }
+
+      .text-center {
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+        white-space: nowrap; /* impedisce il wrapping */
+        color: white;
+      }
+
+      /*  body{
         background-image: url('protruding-squares.svg'); // percorso del file 
 } */
-  </style>
-</head>
-<body>
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="logo-try.svg"
+            alt=""
+            width="45"
+            height="65"
+            class="d-inline-block align-text-top"
+          />
+        </a>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="logo-try.svg" alt="" width="45" height="65" class="d-inline-block align-text-top">
-       
-      </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.letuelezioni.it/insegnanti/abdalla-el-awad.htm">Lezioni</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.uniroma3.it/corsi/dipartimento-di-ingegneria-civile-informatica-e-delle-tecnologie-aeronautiche/lm/2023-2024/ingegneria-informatica-0580707303300001/">Studi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="showAttivita">Attività</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.letuelezioni.it/insegnanti/abdalla-el-awad.htm"
+                >Lezioni</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.uniroma3.it/corsi/dipartimento-di-ingegneria-civile-informatica-e-delle-tecnologie-aeronautiche/lm/2023-2024/ingegneria-informatica-0580707303300001/"
+                >Studi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="showAttivita">Attività</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container mt-4">
-
-    <div class="row justify-content-center">
-      <!-- immagine sempre in alto su mobile, al centro su desktop -->
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <p class="text-center fs-1">I'm Abdalla El Awad </p>
-        <img src="/me-v2.png" alt="Foto di Abdalla El Awad" class="profile-img rounded-circle">
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <p class="text-center fs-1">I'm Abdalla El Awad</p>
+          <!--<img
+            src="/me-v2.png"
+            alt="Foto di Abdalla El Awad"
+            class="profile-img rounded-circle"
+          /> -->
+        </div>
       </div>
-    </div>
+       <p class="text-center fs-4"><i>"Multipotentialite" — From Writing To Web Development, All The Way To Business<i></p>
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card mb-4 card-first">
+            <div class="card-body">
+              <i class="bi bi-github"></i>
+              <h5 class="card-title">Il mio GitHub</h5>
+              <p class="card-text">
+                Accedi per vedere i miei attuali progetti.
+              </p>
 
-    <div class="row justify-content-center g-4">
-      <div class="col-12 col-md-8 col-lg-6">
-        <div class="card mb-4 card-first">
-          <div class="card-body">
-            <h5 class="card-title">Il mio GitHub</h5>
-            <p class="card-text">Accedi per vedere i miei attuali progetti.</p>
-            <a href="https://github.com/reginelsunshine" class="btn btn-primary">Vai</a>
+              <a
+                href="https://github.com/reginelsunshine"
+                class="btn btn-primary"
+                >Vai</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card mb-4 card-second">
+            <div class="card-body">
+              <i class="bi bi-people"></i>
+              <h5 class="card-title">Campagna ...</h5>
+              <p class="card-text">A lavoro su qualcosa...</p>
+              <a href="#" class="btn btn-primary">Vai</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="col-12 col-md-8 col-lg-6">
-        <div class="card mb-4 card-second">
-          <div class="card-body">
-            <h5 class="card-title">Campagna ...</h5>
-            <p class="card-text">A lavoro su qualcosa...</p>
-            <a href="#" class="btn btn-primary">Vai</a>
+    <div class="container mt-4 d-none" id="extraCardsContainer">
+      <div class="row justify-content-center g-4 px-3 px-md-5">
+        <div class="col-12 col-md-8 col-lg-4">
+          <div class="card mb-4 card-act1">
+            <div class="card-body">
+              <h5 class="card-title">Attività 1</h5>
+              <p class="card-text">Dettagli sull'attività 1.</p>
+              <a href="#" class="btn btn-secondary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4">
+          <div class="card mb-4 card-act2">
+            <div class="card-body">
+              <h5 class="card-title">Attività 2</h5>
+              <p class="card-text">Dettagli sull'attività 2.</p>
+              <a href="#" class="btn btn-secondary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4">
+          <div class="card mb-4 card-act3">
+            <div class="card-body">
+              <h5 class="card-title">Attività 3</h5>
+              <p class="card-text">Dettagli sull'attività 3.</p>
+              <a href="#" class="btn btn-secondary">Vai</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
+    <script>
+      const showAttivita = document.getElementById("showAttivita");
+      const extraCardsContainer = document.getElementById(
+        "extraCardsContainer"
+      );
 
-  <!-- Nuove card visibili solo se si clicca su Attività -->
-   <!-- Mettiamo questa parte dentro un container con padding -->
-<div class="container mt-4 d-none" id="extraCardsContainer">
-  <div class="row justify-content-center g-4 px-3 px-md-5">
-    <div class="col-12 col-md-8 col-lg-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Attività 1</h5>
-          <p class="card-text">Dettagli sull'attività 1.</p>
-          <a href="#" class="btn btn-secondary">Vai</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-8 col-lg-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Attività 2</h5>
-          <p class="card-text">Dettagli sull'attività 2.</p>
-          <a href="#" class="btn btn-secondary">Vai</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-8 col-lg-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Attività 3</h5>
-          <p class="card-text">Dettagli sull'attività 3.</p>
-          <a href="#" class="btn btn-secondary">Vai</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      showAttivita.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (extraCardsContainer.classList.contains("d-none")) {
+          extraCardsContainer.classList.remove("d-none");
+          extraCardsContainer.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        } else {
+          extraCardsContainer.classList.add("d-none");
+        }
+      });
+    </script>
 
 
-  <!-- Bootstrap Bundle JS (include Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
 
-  <script>
-   const showAttivita = document.getElementById('showAttivita');
-const extraCardsContainer = document.getElementById('extraCardsContainer');
-
-showAttivita.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (extraCardsContainer.classList.contains('d-none')) {
-    extraCardsContainer.classList.remove('d-none');
-    extraCardsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    extraCardsContainer.classList.add('d-none');
-  }
+gsap.to(".card-first, .card-second",{
+duration:2.5,
+ease: "bounce.out",
+rotation:360,
 });
+</script>
 
 
-  </script>
-
-</body>
+  </body>
 </html>

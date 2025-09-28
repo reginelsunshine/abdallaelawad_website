@@ -228,6 +228,54 @@
         color: white;
       }
 
+      /* About Me Card Styles */
+      .card-about {
+        border-radius: 25px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(9, 9, 121, 1) 50%,
+          rgba(0, 212, 255, 0.9) 100%
+        );
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .card-about:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(9, 9, 121, 0.9) 50%,
+          rgba(0, 212, 255, 0.7) 100%
+        );
+      }
+
+      .card-about .card-title {
+        color: white;
+        font-family: "Playfair Display", serif;
+      }
+
+      .card-about .card-text {
+        color: rgba(255, 255, 255, 0.9);
+        font-family: "Intel One Mono", monospace;
+        line-height: 1.6;
+      }
+
+      .about-section-title {
+        font-family: "Playfair Display", serif;
+        color: white;
+        margin-bottom: 2rem;
+        text-align: center;
+     }
+
+      .bi-person-circle {
+        font-size: 2.5rem;
+        color: white;
+      }
+
       /*  body{
         background-image: url('protruding-squares.svg'); // percorso del file 
 } */
@@ -278,9 +326,9 @@
                 >Studi</a
               >
             </li>
-            <li class="nav-item">
+       <!--     <li class="nav-item">
               <a class="nav-link" href="#" id="showAttivita">Attività</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -297,7 +345,7 @@
           /> -->
         </div>
       </div>
-       <p class="text-center fs-4"><i>"Multipotentialite" — From Writing To Web Development, All The Way To Business<i></p>
+       <p class="text-center fs-4 text-wrap"><i>"Multipotentialite Man" — From Writing To Web Development, All The Way To Business</i></p>
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-8 col-lg-6">
           <div class="card mb-4 card-first">
@@ -329,7 +377,10 @@
         </div>
       </div>
     </div>
-
+  
+<div class="text-center">
+  <img src="my.motto.png" alt="Descrizione immagine" class="img-fluid mt-3">
+</div>
     <div class="container mt-4 d-none" id="extraCardsContainer">
       <div class="row justify-content-center g-4 px-3 px-md-5">
         <div class="col-12 col-md-8 col-lg-4">
@@ -362,6 +413,49 @@
       </div>
     </div>
 
+     <!-- About Me Section -->
+    <div class="container mt-5">
+      <h2 class="about-section-title">Su di me...e non solo</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card card-about">
+            <div class="card-body p-4 p-md-5">
+              <i class="bi bi-person-circle mb-3"></i>
+              <h5 class="card-title mb-4">Chi sono</h5>
+              <p class="card-text mb-3">
+                Ciao! Sono Abdalla El Awad, uno studente di Ingegneria Informatica presso l'Università Roma Tre. 
+                Il campo dell'informatica è molto vasto e attualmente i miei interessi spaziano dallo sviluppo web 
+                alle reti informatiche.
+              </p>
+              <p class="card-text mb-3">
+                Come "Multipotentialite Man", esploro diversi campi: dalla scrittura creativa al business, 
+                dalla poesia Web Design. Io credo che la diversità delle competenze e degli interessi
+                sia una qualità che permette di affrontare le sfide con prospettive più adeguate.
+                Non tutti possono essere d'accordo, naturalmente c'è chi preferisce concentrarsi su una competenza
+                specifica e approfondirla, ma io (almeno per il momento) non riesco a soffermarmi su una sola cosa 
+                e mi piace cimentarmi in più ambiti.
+              </p>
+              <p class="card-text mb-3">
+                Il lavoro non è solo fine a se stesso, ma si lavora anche per uno scopo comune, dallo spazzino che pulisce 
+                le strade in modo che non dobbiamo camminare tra i rifiuti al medico che ci cura quando siamo malati, ogni lavoro
+                per esistere necessita della presenza di un altro lavoro in modo che si possa vivere con un certo equilibrio.
+                Equilibrio che purtroppo giorno dopo giorno diventa sempre più difficile da raggiungere. 
+                Inoltre, secondo me ogni persona può inseguire un obiettivo o meglio una missione molto più grande e non pensare solo ed 
+                esclusivamente al lavoro, tutti possiamo anche nel nostro piccolo fare una bella differenza e magari lasciare questo
+                mondo con la consapevolezza di aver aiutato e contribuito a risolvere o migliorare un problema per una bella fetta
+                di comunità.
+              </p>
+              <p class="card-text">
+                Leggendo queste parole potreste chiedervi: "Okay, ma tu Abdalla cosa hai fatto?" La risposta è che attualmente non ho 
+                fatto ancora nulla di concreto, ma mi impegno per far sì che quanto ho scritto non siano solo parole scritte su questo 
+                miserabile sito web e spero di riuscire a realizzare qualcosa di significativo al più presto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const showAttivita = document.getElementById("showAttivita");
       const extraCardsContainer = document.getElementById(
@@ -384,13 +478,29 @@
 
 
 <script>
-
-gsap.to(".card-first, .card-second",{
-duration:2.5,
-ease: "bounce.out",
-rotation:360,
-});
-</script>
+      // Aspetta che tutto sia caricato per evitare layout shift
+      window.addEventListener('load', function() {
+        // Imposta gli stati iniziali per evitare flash
+        gsap.set(".card-about", { y: 50, opacity: 0 });
+        
+        // Timeline per animazioni coordinate
+        const tl = gsap.timeline();
+        
+        // Animazione delle card principali
+        tl.to(".card-first, .card-second", {
+          duration: 2.5,
+          ease: "bounce.inOut",
+          rotation: 360,
+        })
+        // Animazione About Me dopo le altre
+        .to(".card-about", {
+          duration: 1,
+          y: 0,
+          opacity: 1,
+          ease: "power2.out",
+        }, "-=0.5"); // Inizia 0.5 secondi prima della fine dell'animazione precedente
+      });
+    </script>
 
 
   </body>

@@ -126,6 +126,8 @@
       }
 
       .card-first {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 25px;
         background: #000000;
         background: linear-gradient(
@@ -141,6 +143,8 @@
       }
 
       .card-first:hover {
+        box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        transform: translateY(-5px);
         background: linear-gradient(
           90deg,
           rgba(0, 0, 0, 0.8) 0%,
@@ -159,6 +163,8 @@
       }
 
       .card-second {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 25px;
         background: #000000;
         background: radial-gradient(
@@ -170,6 +176,8 @@
       }
 
       .card-second:hover {
+        box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+        transform: translateY(-5px);
         background: linear-gradient(
           90deg,
           rgba(0, 0, 0, 0.8) 0%,
@@ -238,7 +246,7 @@
           rgba(0, 212, 255, 0.9) 100%
         );
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 3px solid rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
       }
 
@@ -273,8 +281,9 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 12px 20px;
+  font-size: 1.6rem;
   display: inline-block;
   position: relative;
 }
@@ -299,11 +308,12 @@
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
   padding: 12px 20px;
   display: inline-block;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .contact-section-title::after {
@@ -363,9 +373,25 @@
   margin: 0;
 }
 
-.contact-item a {
-  color: rgba(255, 255,
+      .contact-item a {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
 
+      .contact-item a:hover {
+        color: rgba(0, 212, 255, 0.95);
+      }
+
+
+      .profile-image-about {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
       /*  body{
         background-image: url('protruding-squares.svg'); // percorso del file 
 } */
@@ -435,7 +461,7 @@
           /> -->
         </div>
       </div>
-       <p class="text-center fs-4 text-wrap"><i>"Multipotentialite Man" — From Writing To Web Development, All The Way To Business</i></p>
+       <p class="text-center fs-4 text-wrap"><i>"Curiosity-Driven" — Exploring Tech, Business, and Creative Arts</i></p>
       <div class="row justify-content-center g-4">
         <div class="col-12 col-md-8 col-lg-6">
           <div class="card mb-4 card-first">
@@ -512,7 +538,7 @@
         <div class="col-12 col-lg-10">
           <div class="card card-about">
             <div class="card-body p-4 p-md-5">
-              <i class="bi bi-person-circle mb-3"></i>
+              <img src="my.volto.jpg" alt="Abdalla El Awad" class="profile-image-about">
               <h5 class="card-title mb-4">Who I am...and what I think</h5>
               <p class="card-text mb-3">
                 Hi! I'm Abdalla El Awad, a Computer Engineering student at Roma Tre University. 

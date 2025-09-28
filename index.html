@@ -264,17 +264,107 @@
         line-height: 1.6;
       }
 
-      .about-section-title {
-        font-family: "Playfair Display", serif;
-        color: white;
-        margin-bottom: 2rem;
-        text-align: center;
-     }
+    .about-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 12px 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.about-section-title::after {
+  content: "❓❗";
+  margin-left: 10px;
+  font-size: 0.8em;
+}
 
       .bi-person-circle {
         font-size: 2.5rem;
         color: white;
       }
+
+      /* Contact Me Section Styles */
+.contact-section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 12px 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-section-title::after {
+  content: "💬";
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+
+.contact-card {
+  border-radius: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(9, 9, 121, 1) 50%,
+    rgba(0, 212, 255, 0.9) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item h6 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Intel One Mono", monospace;
+  margin: 0;
+}
+
+.contact-item a {
+  color: rgba(255, 255,
 
       /*  body{
         background-image: url('protruding-squares.svg'); // percorso del file 
@@ -316,14 +406,14 @@
               <a
                 class="nav-link"
                 href="https://www.letuelezioni.it/insegnanti/abdalla-el-awad.htm"
-                >Lezioni</a
+                >Tutoring</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="https://www.uniroma3.it/corsi/dipartimento-di-ingegneria-civile-informatica-e-delle-tecnologie-aeronautiche/lm/2023-2024/ingegneria-informatica-0580707303300001/"
-                >Studi</a
+                >Studies</a
               >
             </li>
        <!--     <li class="nav-item">
@@ -351,15 +441,15 @@
           <div class="card mb-4 card-first">
             <div class="card-body">
               <i class="bi bi-github"></i>
-              <h5 class="card-title">Il mio GitHub</h5>
+              <h5 class="card-title">My GitHub</h5>
               <p class="card-text">
-                Accedi per vedere i miei attuali progetti.
+                Access to see my current projects.
               </p>
 
               <a
                 href="https://github.com/reginelsunshine"
                 class="btn btn-primary"
-                >Vai</a
+                >Go</a
               >
             </div>
           </div>
@@ -369,9 +459,9 @@
           <div class="card mb-4 card-second">
             <div class="card-body">
               <i class="bi bi-people"></i>
-              <h5 class="card-title">Campagna ...</h5>
-              <p class="card-text">A lavoro su qualcosa...</p>
-              <a href="#" class="btn btn-primary">Vai</a>
+              <h5 class="card-title">Campaign ...</h5>
+              <p class="card-text">Working on something..</p>
+              <a href="#" class="btn btn-primary">Go</a>
             </div>
           </div>
         </div>
@@ -415,46 +505,90 @@
 
      <!-- About Me Section -->
     <div class="container mt-5">
-      <h2 class="about-section-title">Su di me...e non solo</h2>
+      <div class="text-center">
+  <h2 class="about-section-title">About me...and more</h2>
+</div>
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
           <div class="card card-about">
             <div class="card-body p-4 p-md-5">
               <i class="bi bi-person-circle mb-3"></i>
-              <h5 class="card-title mb-4">Chi sono</h5>
+              <h5 class="card-title mb-4">Who I am...and what I think</h5>
               <p class="card-text mb-3">
-                Ciao! Sono Abdalla El Awad, uno studente di Ingegneria Informatica presso l'Università Roma Tre. 
-                Il campo dell'informatica è molto vasto e attualmente i miei interessi spaziano dallo sviluppo web 
-                alle reti informatiche.
+                Hi! I'm Abdalla El Awad, a Computer Engineering student at Roma Tre University. 
+                The field of computer science is very vast and currently my interests range from web development to computer networks.
+              </p>
+                <p class="card-text mb-3">
+                As a "Multipotentialite Man", I explore different fields: from creative writing to business, from poetry to 
+                Web Design. I believe that diversity of skills and interests is a quality that allows us to face challenges 
+                with more appropriate perspectives. Not everyone can agree, naturally there are those who prefer to focus 
+                on a specific skill and deepen it, but I (at least for now) can't dwell on just one thing and I like to try my hand at multiple areas.
               </p>
               <p class="card-text mb-3">
-                Come "Multipotentialite Man", esploro diversi campi: dalla scrittura creativa al business, 
-                dalla poesia Web Design. Io credo che la diversità delle competenze e degli interessi
-                sia una qualità che permette di affrontare le sfide con prospettive più adeguate.
-                Non tutti possono essere d'accordo, naturalmente c'è chi preferisce concentrarsi su una competenza
-                specifica e approfondirla, ma io (almeno per il momento) non riesco a soffermarmi su una sola cosa 
-                e mi piace cimentarmi in più ambiti.
+                Being multipotential doesn't mean I'm automatically good at everything — actually, quite the opposite! The truth is, 
+                I'm not an expert in many things. Multipotential is simply a broad term to describe someone with many 
+                different interests across various, often unrelated fields. Of course, one can be both highly skilled and 
+                multipotential. In my case, it just means I'm curious and passionate about exploring diverse paths.
               </p>
               <p class="card-text mb-3">
-                Il lavoro non è solo fine a se stesso, ma si lavora anche per uno scopo comune, dallo spazzino che pulisce 
-                le strade in modo che non dobbiamo camminare tra i rifiuti al medico che ci cura quando siamo malati, ogni lavoro
-                per esistere necessita della presenza di un altro lavoro in modo che si possa vivere con un certo equilibrio.
-                Equilibrio che purtroppo giorno dopo giorno diventa sempre più difficile da raggiungere. 
-                Inoltre, secondo me ogni persona può inseguire un obiettivo o meglio una missione molto più grande e non pensare solo ed 
-                esclusivamente al lavoro, tutti possiamo anche nel nostro piccolo fare una bella differenza e magari lasciare questo
-                mondo con la consapevolezza di aver aiutato e contribuito a risolvere o migliorare un problema per una bella fetta
-                di comunità.
+                Work is not just an end in itself, but we also work for a common purpose, from the street cleaner who 
+                cleans the streets so we don't have to walk among garbage to the doctor who treats us when we're sick, 
+                every job needs the presence of another job to exist so that we can live with a certain balance. 
+                Balance that unfortunately day by day becomes increasingly difficult to achieve. 
+                I don't hide the fact that I believe in a future where we work much less in order to do the things we like most and I'm aware that maybe it won't be 
+                easy with companies that will continue not to hire more staff and exploit those already present by loading them with 
+                additional work, some will manage to say no to these squalid conditions and others unfortunately won't succeed 
+                immediately. Furthermore, in my opinion every person can pursue a goal or rather a much bigger mission and not 
+                think only and exclusively about work, we can all make a good difference even in our small way and maybe leave 
+                this world with the awareness of having helped and contributed to solving or improving a problem for a good slice of 
+                the community.
               </p>
               <p class="card-text">
-                Leggendo queste parole potreste chiedervi: "Okay, ma tu Abdalla cosa hai fatto?" La risposta è che attualmente non ho 
-                fatto ancora nulla di concreto, ma mi impegno per far sì che quanto ho scritto non siano solo parole scritte su questo 
-                miserabile sito web e spero di riuscire a realizzare qualcosa di significativo al più presto.
+                Reading these words you might ask yourselves: "Okay, but what have you done, Abdalla?" 
+                The answer is that I currently haven't done anything concrete yet, but I'm committed to making sure 
+                that what I've written isn't just words written on this miserable website and I hope to be able to achieve 
+                something significant as soon as possible.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Contact Me Section -->
+<div class="container mt-5 mb-5">
+  <div class="text-center">
+    <h2 class="contact-section-title">Contact me</h2>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="contact-card">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="contact-item">
+              <i class="bi bi-whatsapp"></i>
+              <h6>WhatsApp</h6>
+              <p><a href="https://wa.me/1234567890" target="_blank">+39 123 456 7890</a></p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="contact-item">
+              <i class="bi bi-envelope"></i>
+              <h6>Email</h6>
+              <p><a href="mailto:abdallaelawad@gmx.com">abdallaelawad@gmx.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p style="color: rgba(255, 255, 255, 0.8); font-family: 'Intel One Mono', monospace;">
+            Contact me for questions, curiosities, and work commissions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script>
       const showAttivita = document.getElementById("showAttivita");
